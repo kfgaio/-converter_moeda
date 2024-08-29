@@ -1,0 +1,35 @@
+def converter_moeda(valor, taxa):
+    return valor * taxa
+
+def main():
+    taxa_dolar_para_real = 5.00  # 1 USD = 5.00 BRL
+    taxa_euro_para_real = 5.50   # 1 EUR = 5.50 BRL
+    taxa_real_para_dolar = 1 / taxa_dolar_para_real
+    taxa_real_para_euro = 1 / taxa_euro_para_real
+
+    print("Conversor de Moedas: Real, Dólar e Euro")
+    print("1. Real para Dólar")
+    print("2. Real para Euro")
+    print("3. Dólar para Real")
+    print("4. Euro para Real")
+
+    opcao = int(input("Escolha uma opção de conversão (1-4): "))
+
+    valor = float(input("Digite o valor a ser convertido: "))
+
+    if opcao == 1:
+        convertido = converter_moeda(valor, taxa_real_para_dolar)
+        print(f"{valor:.2f} BRL é igual a {convertido:.2f} USD")
+    elif opcao == 2:
+        convertido = converter_moeda(valor, taxa_real_para_euro)
+        print(f"{valor:.2f} BRL é igual a {convertido:.2f} EUR")
+    elif opcao == 3:
+        convertido = converter_moeda(valor, taxa_dolar_para_real)
+        print(f"{valor:.2f} USD é igual a {convertido:.2f} BRL")
+    elif opcao == 4:
+        convertido = converter_moeda(valor, taxa_euro_para_real)
+        print(f"{valor:.2f} EUR é igual a {convertido:.2f} BRL")
+    else:
+        print("Opção inválida! Por favor, escolha uma opção entre 1 e 4.")
+
+main()
