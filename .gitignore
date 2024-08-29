@@ -1,0 +1,41 @@
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Environment files
+.env
+*.env
+
+# Virtual environment directory
+venv/
+env/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*.suo
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build directories
+build/
+dist/
+
+# Python egg files
+*.egg
+*.egg-info
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# PyInstaller
+*.spec
